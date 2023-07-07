@@ -68,27 +68,26 @@
         <button id="submitButton" class="btn btn-dark"> Confirm</button>
         <script>
           document.getElementById('submitButton').addEventListener('click', function() {
-            const textStr = document.getElementById('str').value;
-            const textDef = document.getElementById('def').value;
-            const textMag = document.getElementById('mag').value;
-            const textSpi = document.getElementById('spi').value;
-            const textSpd = document.getElementById('spd').value;
-            const textLuk = document.getElementById('luk').value;
+            const textStr = document.getElementById('textStr').value;
+            const textDef = document.getElementById('textDef').value;
+            const textMag = document.getElementById('textMag').value;
+            const textSpi = document.getElementById('textSpi').value;
+            const textSpd = document.getElementById('textSpd').value;
+            const textLuk = document.getElementById('textLuk').value;
 
-        
             const data = new FormData();
-            data.append('textStr', str);
-            data.append('textDef', def);
-            data.append('textMag', mag);
-            data.append('textSpi', spi);
-            data.append('textSpd', spd);
-            data.append('textLuk', luk);
-        
+            data.append('textStr', textStr);
+            data.append('textDef', textDef);
+            data.append('textMag', textMag);
+            data.append('textSpi', textSpi);
+            data.append('textSpd', textSpd);
+            data.append('textLuk', textLuk);
+            textStr
             sendData(data);
           });
         
           function sendData(data) {
-            fetch('index.php', {
+            fetch('http://localhost:8000/index.php', {
               method: 'POST',
               body: data
             })
