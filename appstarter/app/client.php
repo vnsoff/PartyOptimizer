@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
   <title>POM</title>
 <body>
+
   <nav class="navbar navbar-dark bg-primary">
     <a class="navbar-brand" href="#">
       <strong> POM </strong> | Party Optimizer
